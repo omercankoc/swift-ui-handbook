@@ -1,2 +1,2 @@
-# path-case-study
+# Path Case Study
 Case Study
