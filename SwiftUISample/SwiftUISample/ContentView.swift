@@ -14,7 +14,7 @@ struct ContentView: View {
                 ForEach(languages) { languages in
                     Section(header: Text(languages.title)){
                         ForEach(languages.languageType){ language in
-                            NavigationLink(destination : DetailsView()){
+                            NavigationLink(destination : DetailsView(chosenLanguage: language)){
                                 Text(language.language)
                             }
                         }
