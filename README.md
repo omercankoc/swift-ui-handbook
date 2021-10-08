@@ -1,2 +1,1 @@
-# Path Case Study
-Case Study
+# Swift UI Sample
