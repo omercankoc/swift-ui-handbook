@@ -31,3 +31,5 @@ let ruby = LanguageModel(language: "Ruby", image: "ruby", description: "Interpre
 let compiled = LanguageType(title: "Compiled", languageType: [rust,kotlin,swift])
 let interpreted = LanguageType(title: "Interpreted", languageType: [javascript,python,ruby])
 
+let languages = [compiled,interpreted]
+

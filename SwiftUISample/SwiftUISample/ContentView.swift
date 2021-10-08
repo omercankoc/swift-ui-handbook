@@ -8,9 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var name = "Omer"
     var body: some View {
-        
+        NavigationView {
+            List {
+                ForEach(languages) { languages in
+                    Section(header: Text(languages.title)){
+                        ForEach(languages.languageType){ language in
+                            NavigationLink(destination : DetailsView()){
+                                Text(language.language)
+                            }
+                        }
+                    }
+                }
+            }.navigationBarTitle(Text("Languages")
+                                    .font(.largeTitle))
+        }
     }
 }
 
