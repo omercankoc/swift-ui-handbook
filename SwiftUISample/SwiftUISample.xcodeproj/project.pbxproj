@@ -11,6 +11,7 @@
 		6A68741F271053E30079B03F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A68741E271053E30079B03F /* ContentView.swift */; };
 		6A687421271053E80079B03F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A687420271053E80079B03F /* Assets.xcassets */; };
 		6A687424271053E80079B03F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A687423271053E80079B03F /* Preview Assets.xcassets */; };
+		6A68742B27106CA60079B03F /* LanguagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A68742A27106CA60079B03F /* LanguagesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		6A68741E271053E30079B03F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6A687420271053E80079B03F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A687423271053E80079B03F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6A68742A27106CA60079B03F /* LanguagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				6A68741C271053E30079B03F /* SwiftUISampleApp.swift */,
 				6A68741E271053E30079B03F /* ContentView.swift */,
+				6A68742A27106CA60079B03F /* LanguagesModel.swift */,
 				6A687420271053E80079B03F /* Assets.xcassets */,
 				6A687422271053E80079B03F /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A68742B27106CA60079B03F /* LanguagesModel.swift in Sources */,
 				6A68741F271053E30079B03F /* ContentView.swift in Sources */,
 				6A68741D271053E30079B03F /* SwiftUISampleApp.swift in Sources */,
 			);
