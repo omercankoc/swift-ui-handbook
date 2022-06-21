@@ -216,23 +216,37 @@ var body: some View {
 SwiftUI’s sheets are used to present new views over existing ones, while still allowing users to drag down to dismiss the new view when they are ready.
 
 To use a sheet, give it something to show (some text, an image, a custom view, etc), add a Boolean that defines whether the detail view should be showing, then attach it to your main view as a modal sheet.
+
 ```swift
 struct ContentView: View {
     
     @State private var toDetailView : Bool = false
     
-    var body: some View {   
+    var sendData : String = "Swift"
+    
+    var body: some View {
+    
         Button("Go To Detail View",action: {
             self.toDetailView = true
         }).sheet(isPresented: $toDetailView){
-            DetailView()
+            DetailView(receivedData: self.sendData)
         }
     }
 }
 
 struct DetailView : View {
+    
+    @Environment(\.presentationMode) var toContentView
+    
+    var receivedData : String?
+    
     var body: some View {
-        Text("Welcome Detail View!")
+        VStack{
+            Text("Data : \(receivedData!)")
+            Button("Go To Content View",action: {
+                self.toContentView.wrappedValue.dismiss()
+            })
+        }
     }
 }
 
