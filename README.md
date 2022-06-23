@@ -1,10 +1,8 @@
 # Stack
 
-<a href="HStack">HStack</a>
-
 Individually, HStack, VStack, and ZStack are simple views. HStack positions views in a horizontal line, VStack positions them in a vertical line, and ZStack overlays views on top of one another.
 
-<a name="HStack">HStack</a>
+## HStack
 ```swift
 var body: some View {
     HStack {
