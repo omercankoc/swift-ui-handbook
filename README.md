@@ -311,13 +311,13 @@ struct ContentView_Previews: PreviewProvider {
 # Navigation Bar
 
 ```swift
-struct ContentView: View {
-            
-    var body: some View {   
+struct ContentView: View {            
+    var body: some View {
         NavigationView {
             VStack {
                 Text("Content View")
-            }.navigationBarTitle("Content View",displayMode: .inline)
+            }.navigationTitle("Content View")
+                .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button("Help") {
@@ -335,6 +335,41 @@ struct ContentView: View {
                         } label: {
                             Label("Edit",systemImage: "pencil")
                         }
+                    }
+                }        
+        }
+    }
+}
+```
+
+# Tab Bar
+```swift
+struct ContentView: View {            
+    var body: some View {    
+        NavigationView {
+            TabView {
+                VStack {
+                    Text("First Screen").font(.largeTitle)
+                }.tabItem {
+                    Image(systemName: "1.circle")
+                    Text("First")
+                }.tag(0)
+                VStack {
+                    Text("Second Screen").font(.largeTitle)
+                }.tabItem {
+                    Image(systemName: "2.circle")
+                    Text("First")
+                }.tag(1)
+            }.navigationTitle("Content View")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button {
+                            print("Edit 1")
+                        } label: {
+                            Image(systemName: "3.circle")
+                        }
+                                            
                     }
                 }
         }
