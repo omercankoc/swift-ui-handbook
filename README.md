@@ -259,3 +259,51 @@ struct ContentView_Previews: PreviewProvider {
 
 # Navigation View
 NavigationView is one of the most important components of a SwiftUI app, allowing us to push and pop screens with ease, presenting information in a clear, hierarchical way for users. In this article I want to demonstrate the full range of ways you can use NavigationView in your apps, including simple things like setting a title and adding buttons, but also programmatic navigation, creating split views, and more.
+
+```swift
+class Person{
+    var name : String?
+    var surname : String?
+    
+    init(){
+        
+    }
+    
+    init(name : String, surname : String){
+        self.name = name
+        self.surname = surname
+    }
+}
+
+struct ContentView: View {
+            
+    var body: some View {
+    
+        NavigationView {
+            VStack {
+                NavigationLink(destination : DetailView(person: Person(name: "James", surname: "Cook"))){
+                    Text("Go to Details View")
+                }
+            }.navigationTitle("Content View")
+        }
+    }
+}
+
+struct DetailView : View {
+        
+    var person = Person()
+    
+    var body: some View {
+        VStack{
+            Text("Name: \(person.name!)")
+            Text("Surname: \(person.surname!)")
+        }.navigationTitle("Detail")
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
