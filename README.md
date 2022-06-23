@@ -307,6 +307,41 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 ```
+
+# Navigation Bar
+
+```swift
+struct ContentView: View {
+            
+    var body: some View {   
+        NavigationView {
+            VStack {
+                Text("Content View")
+            }.navigationBarTitle("Content View",displayMode: .inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button("Help") {
+                            print("Help")
+                        }
+                    }
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button {
+                            print("Edit 1")
+                        } label: {
+                            Image(systemName: "pencil")
+                        }
+                        Button {
+                            print("Edit 2")
+                        } label: {
+                            Label("Edit",systemImage: "pencil")
+                        }
+                    }
+                }
+        }
+    }
+}
+```
+
 # Observer Pattern
 It is a pattern used for data sharing. It consists of three parts:
 1. ObservableObject : Creates class for data sharing. It must inherit the ObservableObject class. The properties in it must be Published. This feature will be shared between all interfaces.
