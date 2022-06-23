@@ -212,7 +212,7 @@ var body: some View {
 }
 ```
 
-# Present Modal
+# Sheets
 SwiftUI’s sheets are used to present new views over existing ones, while still allowing users to drag down to dismiss the new view when they are ready.
 
 To use a sheet, give it something to show (some text, an image, a custom view, etc), add a Boolean that defines whether the detail view should be showing, then attach it to your main view as a modal sheet.
@@ -222,14 +222,14 @@ struct ContentView: View {
     
     @State private var toDetailView : Bool = false
     
-    var sendData : String = "Swift"
+    var send : String = "Swift"
     
     var body: some View {
     
         Button("Go To Detail View",action: {
             self.toDetailView = true
         }).sheet(isPresented: $toDetailView){
-            DetailView(receivedData: self.sendData)
+            DetailView(receivedData: self.send)
         }
     }
 }
@@ -238,11 +238,11 @@ struct DetailView : View {
     
     @Environment(\.presentationMode) var toContentView
     
-    var receivedData : String?
+    var receive : String?
     
     var body: some View {
         VStack{
-            Text("Data : \(receivedData!)")
+            Text("Data : \(receive!)")
             Button("Go To Content View",action: {
                 self.toContentView.wrappedValue.dismiss()
             })
@@ -256,3 +256,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 ```
+
+# Navigation View
+NavigationView is one of the most important components of a SwiftUI app, allowing us to push and pop screens with ease, presenting information in a clear, hierarchical way for users. In this article I want to demonstrate the full range of ways you can use NavigationView in your apps, including simple things like setting a title and adding buttons, but also programmatic navigation, creating split views, and more.
