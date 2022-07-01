@@ -96,7 +96,7 @@ struct HorizontalFlightsView: View {
 ```
 ## Picker
 ```swift
-struct HorizontalFlightsView: View {
+struct MainView: View {
     
     @State private var select : Int = 0
     
@@ -112,3 +112,25 @@ struct HorizontalFlightsView: View {
     }
 }
 ```
+## Stepper
+```swift
+struct MainView: View {
+    
+    @State private var value : Int = 0
+    
+    var body: some View {
+        VStack {
+            Stepper("Run +-1",value: $value,in:0...11)
+            Stepper("Run +-2", onIncrement: {
+                self.value = self.value + 2
+            },onDecrement: {
+                self.value = self.value - 2
+            })
+            Text("Select : \(value)")
+        }
+        .padding(.trailing,10)
+        .padding(.leading,10)
+    }
+}
+```
+
