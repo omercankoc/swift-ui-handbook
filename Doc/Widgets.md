@@ -153,3 +153,30 @@ struct MainView: View {
     }
 }
 ```
+## Gesture Recognizer
+```swift
+struct MainView: View {
+    
+    @State private var status : String = ""
+        
+    var body: some View {
+        VStack(spacing : 10) {
+            Text("Click")
+                .onTapGesture {
+                    self.status = "One"
+                }
+                .onLongPressGesture {
+                    self.status = "Long"
+                }
+                .frame(width: 100, height: 100, alignment: .center)
+                .background {
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(.black)
+                }
+            Text("\(status)")
+        }
+        .padding(.trailing,10)
+        .padding(.leading,10)
+    }
+}
+```
