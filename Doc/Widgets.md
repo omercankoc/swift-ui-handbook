@@ -182,7 +182,7 @@ struct MainView: View {
 ```
 ## Date Picker and Time Picker
 ```swift
-struct HorizontalFlightsView: View {
+struct MainView: View {
     
     @State private var format = Date()
     @State private var boolDate : Bool = false
