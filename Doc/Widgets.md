@@ -2,14 +2,95 @@
 
 ## Text
 ```swift
-struct LoginView: View {
+struct MainView : View {
     var body: some View {
         Text("Hello, world!")
-            .font(.largeTitle)
-            .foregroundColor(Color.green)
-            .background(Color.blue)
-            .padding()
+            .font(.body)
+            .bold()
+            .foregroundColor(Color.black)
+            .background {
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.black)
+                    
+            }
+            .frame(width: 100, height: 50, alignment: .center)
     }
 }
 ```
 ## Button
+```swift
+struct MainView : View {
+    var body: some View {
+        Button {
+            print("Added!")
+        } label: {
+            HStack(spacing:5) {
+                Image(systemName: "plus")
+                Text("Add")
+                    
+            }
+            .padding(.all,10)
+            .background {
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(.blue)
+                    
+            }
+        }
+    }
+}
+```
+## TextField
+```swift
+struct LoginView : View {
+    
+    @State private var username : String = ""
+    @State private var password : String = ""
+    
+    var body: some View {
+        VStack {
+        
+            TextField("Username",text: $username)
+                .padding(.leading,10)
+                .keyboardType(.numberPad)
+                .frame(width: 300, height: 40, alignment: .center)
+                .background {
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(.black)
+                }
+            
+            SecureField("Password",text: $password)
+                .padding(.leading,10)
+                .keyboardType(.default)
+                .frame(width: 300, height: 40, alignment: .center)
+                .background {
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(.black)
+                }
+        }
+    }
+}
+```
+## Toggle
+```swift
+struct HorizontalFlightsView: View {
+    
+    @State private var logic : Bool = false
+    
+    var body: some View {
+        VStack{
+            HStack {
+                Toggle(isOn: $logic){
+                    Text("Logic : ")
+                }
+                .padding(.leading,20)
+                .padding(.trailing,20)
+            }
+            if logic {
+                Text("TRUE")
+            } else {
+                Text("FALSE")
+            }
+        }
+    }
+}
+```
