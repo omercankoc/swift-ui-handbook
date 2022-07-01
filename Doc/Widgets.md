@@ -94,3 +94,21 @@ struct HorizontalFlightsView: View {
     }
 }
 ```
+## Picker
+```swift
+struct HorizontalFlightsView: View {
+    
+    @State private var select : Int = 0
+    
+    var body: some View {
+        VStack {
+            Picker(selection: $select, label: Text("")){
+                Text("First").tag(0)
+                Text("Second").tag(1)
+                Text("Third").tag(2)
+            }.pickerStyle(.inline)
+            Text("Select : \(select)")
+        }
+    }
+}
+```
