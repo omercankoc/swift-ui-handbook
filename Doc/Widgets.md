@@ -180,3 +180,116 @@ struct MainView: View {
     }
 }
 ```
+## Date Picker and Time Picker
+```swift
+struct HorizontalFlightsView: View {
+    
+    @State private var format = Date()
+    @State private var boolDate : Bool = false
+    @State private var boolTime : Bool = false
+    @State private var date = ""
+    @State private var time = ""
+    
+    var body: some View {
+        VStack(spacing : 10) {
+            TextField("Date", text: $date)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .onTapGesture {
+                    self.boolDate = true
+                    self.boolTime = false
+                }
+            TextField("Time",text: $time)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .onTapGesture {
+                    self.boolDate = false
+                    self.boolTime = true
+                }
+            
+            /*
+             Set Date
+             */
+            if boolDate {
+                DatePicker("",selection: $format,displayedComponents: .date).labelsHidden()
+                
+                HStack {
+                    
+                    Button {
+                        self.boolDate = false
+                        self.boolTime = false
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "MM/dd/yyyy"
+                        let getDate = dateFormatter.string(from: self.format)
+                        self.date = getDate
+                        
+                    } label: {
+                        Text("Select Date")
+                            .padding(.leading,10)
+                            .padding(.trailing,10)
+                            .background {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(.blue)
+                            }
+                    }
+                    
+                    Button {
+                        self.boolDate = false
+                        self.boolTime = false
+                    } label: {
+                        Text("Close")
+                            .padding(.leading,10)
+                            .padding(.trailing,10)
+                            .background {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(.blue)
+                            }
+                    }
+                }
+            }
+            
+            /*
+             Set Time
+             */
+            if boolTime {
+                DatePicker("",selection: $format,displayedComponents: .hourAndMinute).labelsHidden()
+                
+                HStack {
+                    
+                    Button {
+                        self.boolDate = false
+                        self.boolTime = false
+                        let timeFormatter = DateFormatter()
+                        timeFormatter.dateFormat = "hh:mm"
+                        let getTime = timeFormatter.string(from: self.format)
+                        self.time = getTime
+                        
+                    } label: {
+                        Text("Select Hour")
+                            .padding(.leading,10)
+                            .padding(.trailing,10)
+                            .background {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(.blue)
+                            }
+                    }
+                    
+                    Button {
+                        self.boolDate = false
+                        self.boolTime = false
+                    } label: {
+                        Text("Close")
+                            .padding(.leading,10)
+                            .padding(.trailing,10)
+                            .background {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(.blue)
+                            }
+                    }
+                }
+            }
+            
+        }.frame(width: 200, height: 200, alignment: .top)
+        .padding(.leading,10)
+        .padding(.trailing,10)
+    }
+}
+```
