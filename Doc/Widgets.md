@@ -91,6 +91,8 @@ struct HorizontalFlightsView: View {
                 Text("FALSE")
             }
         }
+        .padding(.trailing,10)
+        .padding(.leading,10)
     }
 }
 ```
@@ -109,6 +111,8 @@ struct MainView: View {
             }.pickerStyle(.inline)
             Text("Select : \(select)")
         }
+        .padding(.trailing,10)
+        .padding(.leading,10)
     }
 }
 ```
@@ -133,4 +137,19 @@ struct MainView: View {
     }
 }
 ```
-
+## Slider
+```swift
+struct MainView: View {
+    
+    @State private var value : Double = 0
+    
+    var body: some View {
+        VStack {
+            Slider(value: $value, in: 0...10,step: 1)
+            Text("Select : \(Int(value))")
+        }
+        .padding(.trailing,10)
+        .padding(.leading,10)
+    }
+}
+```
