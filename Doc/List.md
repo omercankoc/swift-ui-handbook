@@ -44,3 +44,50 @@ struct RowView : View {
     }
 }
 ```
+## Sample
+```swift
+struct HorizontalFlightsView: View {
+    
+    @State private var textList = [String]()
+    
+    var body: some View {
+        
+        NavigationView {
+            List {
+                ForEach(textList,id: \.self){ item in
+                    NavigationLink( destination: DetailView(message: item)){
+                        RowView(text: item)
+                    }
+                }
+                .onDelete(perform: deleteItem)
+            }
+            .navigationTitle("Text List")
+            .navigationBarTitleDisplayMode(.inline)
+                
+        }
+        .onAppear(){
+            self.textList = ["C","C++","Objective C", "Objective C++","Swift"]
+        }
+    }
+    
+    func deleteItem(at offsets : IndexSet){
+        self.textList.remove(atOffsets: offsets)
+    }
+}
+
+struct DetailView : View {   
+    var message : String    
+    var body: some View {
+        HStack {
+            Text(message)
+        }
+    }
+}
+    
+struct RowView : View {
+    var text : String = ""    
+    var body: some View {
+        Text("\(text)")
+    }
+}
+```
