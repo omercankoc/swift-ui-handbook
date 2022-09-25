@@ -46,6 +46,7 @@ struct ContentView: View {
 
 ```
 ## Button
+You create a button by providing an action and a label. The action is either a method or closure property that does something when a user clicks or taps the button.
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -145,6 +146,20 @@ struct ContentView: View {
                 .background { RoundedRectangle(cornerRadius: 10).stroke(.black) }
             Text("\(status)")
         }
+    }
+}
+```
+## Image
+Use an Image instance when you want to add images to your SwiftUI app. You can create images from many sources.
+```swift
+struct ContentView: View {
+    var body: some View {
+        Image("swift")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: UIScreen.main.bounds.width,
+                height: UIScreen.main.bounds.height,
+                alignment: .center)
     }
 }
 ```
