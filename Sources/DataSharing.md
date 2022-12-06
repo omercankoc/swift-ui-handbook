@@ -74,7 +74,7 @@ struct DetailView : View {
 ```
 
 
-# Singleton Pattern Design
+# Singleton Design Pattern
 
 ```swift
 ```
