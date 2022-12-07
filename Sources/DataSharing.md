@@ -75,6 +75,62 @@ struct DetailView : View {
 
 
 # Singleton Design Pattern
+"EnvironmentObject" can be used for data that needs to be shared with many views in your application. This allows us to share model data wherever it is needed, while also ensuring that our views are automatically updated when that data changes.
+
 
 ```swift
+class Counter : ObservableObject {
+    @Published var count : Int = 0
+}
+
+struct ContentView: View {
+    @StateObject var counter = Counter()
+            
+    var body: some View {
+        NavigationView {
+            VStack {
+                Text("Counter : \(self.counter.count)")
+                Button {
+                    self.counter.count += 1
+                } label: {
+                    Text("Increase")
+                        .frame(width: 200, height: 50, alignment: .center)
+                        .foregroundColor(.black)
+                        .background(.green)
+                        .cornerRadius(20)
+                }
+                NavigationLink(destination: DetailView()){
+                    Text("Go to Details View")
+                        .frame(width: 200, height: 50, alignment: .center)
+                        .background {
+                            RoundedRectangle(cornerRadius: 20).stroke(.black)
+                        }
+                        .foregroundColor(.black)
+                }
+            }
+            .navigationTitle("Content View")
+            .navigationBarTitleDisplayMode(.inline)
+        }.environmentObject(counter)
+    }
+}
+
+struct DetailView : View {
+    @EnvironmentObject var counter : Counter
+    
+    var body: some View {
+        VStack{
+            Text("Counter \(counter.count)")
+            Button {
+                self.counter.count += 1
+            } label: {
+                Text("Increase")
+                    .frame(width: 200, height: 50, alignment: .center)
+                    .foregroundColor(.black)
+                    .background(.green)
+                    .cornerRadius(20)
+            }
+        }
+        .navigationTitle("Detail")
+    }
+}
 ```
