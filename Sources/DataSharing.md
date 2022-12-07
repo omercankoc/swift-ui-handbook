@@ -75,9 +75,29 @@ struct DetailView : View {
 
 
 # Singleton Design Pattern
-"EnvironmentObject" can be used for data that needs to be shared with many views in your application. This allows us to share model data wherever it is needed, while also ensuring that our views are automatically updated when that data changes.
+Singleton design pattern is a design pattern that guarantees that only 1 object is created at runtime. Importantly, we must ensure that an instance exists and provide a global access point to it.
 
+Environment Object is an implementation of this on the SwiftUI side. "EnvironmentObject" can be used for data that needs to be shared with many views in your application. This allows us to share model data wherever it is needed, while also ensuring that our views are automatically updated when that data changes.
 
+Think of "EnvironmentObject" as a simpler way than using "ObservedObject" in many views. Instead of creating some data in view A, then passing it to view B, then passing it to view C, then to view D and finally using it, you can create the view in A and put it in the environment for views B, C, and D to appear. Will be automatically accessed.
+
+ - ObservableObject : Creates a class for data sharing. It must inherit the "ObservableObject" class. The properties in it must be "Published". This properties will be shared across all interfaces.
+ - Published : Properties that belong to the "ObservableObject" class that will be published when changes occur.
+
+```swift
+class Counter : ObservableObject {
+    @Published var count : Int = 0
+}
+```
+- StateObject : When we create an instance of the class, it observes changes in the properties of that class scope the entire application.
+```swift
+@StateObject var counter = Counter()
+```
+- EnvironmentObject : Represents the shared and observer class.
+```swift
+ @EnvironmentObject var counter : Counter
+```
+Now, let's take an example in this regard.
 ```swift
 class Counter : ObservableObject {
     @Published var count : Int = 0
