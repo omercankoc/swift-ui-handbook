@@ -1,4 +1,4 @@
-# Observer Design Pattern
+# Observer Object and Binding
 A design pattern that notifies all items in a list of changes in an object.
  - ObservableObject : Creates a class for data sharing. It must inherit the "ObservableObject" class. The properties in it must be "Published". This properties will be shared across all interfaces.
  - Published : Properties that belong to the "ObservableObject" class that will be published when changes occur.
@@ -74,7 +74,7 @@ struct DetailView : View {
 ```
 
 
-# Singleton Design Pattern
+# State Object and Environment Object
 Singleton design pattern is a design pattern that guarantees that only 1 object is created at runtime. Importantly, we must ensure that an instance exists and provide a global access point to it.
 
 Environment Object is an implementation of this on the SwiftUI side. "EnvironmentObject" can be used for data that needs to be shared with many views in your application. This allows us to share model data wherever it is needed, while also ensuring that our views are automatically updated when that data changes.
