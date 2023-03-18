@@ -1,3 +1,22 @@
+## Binding
+Use a binding to create a two-way connection between a property that stores data, and a view that displays and changes the data. A binding connects a property to a source of truth stored elsewhere, instead of storing data directly. For example, a button that toggles between play and pause can create a binding to a property of its parent view using the Binding property wrapper.
+```swift
+struct ContentView: View {
+    
+    @State var name = "Omer"
+    
+    var body: some View {
+        VStack {
+            Text(name)
+                .padding()
+                .font(.title)
+            TextField("placeholder",text: $name)
+                .padding()
+        }
+    }
+}
+```
+
 ## Text
 ```swift
  struct ContentView: View {
@@ -44,22 +63,9 @@ struct ContentView: View {
         }
     }
 }
+```
+![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/TextField.png "TextField")
 
-```
-## Binding
-Use a binding to create a two-way connection between a property that stores data, and a view that displays and changes the data. A binding connects a property to a source of truth stored elsewhere, instead of storing data directly. For example, a button that toggles between play and pause can create a binding to a property of its parent view using the Binding property wrapper.
-```swift
-@State var name = "Omer"
-var body: some View {
-    VStack {
-        Text(name)
-            .padding()
-            .font(.title)
-        TextField("placeholder",text: $name)
-            .padding()
-    }
-}
-```
 ## Button
 You create a button by providing an action and a label. The action is either a method or closure property that does something when a user clicks or taps the button.
 ```swift
@@ -89,14 +95,23 @@ struct ContentView: View {
     
     var body: some View {
         HStack {
-            Toggle(isOn: $logic){ Text("Logic : ") }
-            if logic { Text("TRUE") } else { Text("FALSE") }
+            Toggle(isOn: $logic){
+                Text("Logic : ")
+            }
+            
+            if logic {
+                Text("TRUE")
+            } else {
+                Text("FALSE")
+            }
         }
         .padding(.trailing,10)
         .padding(.leading,10)
     }
 }
 ```
+![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Toggle.png "Toggle")
+
 ## Picker
 ```swift
 struct ContentView: View {
