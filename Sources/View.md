@@ -15,6 +15,7 @@
     }
 }
 ```
+![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Text.png "Text")
 ## TextField
 ```swift
 struct ContentView: View {
