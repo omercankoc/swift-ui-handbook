@@ -124,7 +124,9 @@ struct ContentView: View {
                 Text("First").tag(0)
                 Text("Second").tag(1)
                 Text("Third").tag(2)
-            }.pickerStyle(.wheel)
+            }
+            .pickerStyle(.wheel)
+            
             Text("Select : \(select)")
         }
         .padding(.trailing,10)
@@ -132,6 +134,15 @@ struct ContentView: View {
     }
 }
 ```
+![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Toggle.png "Toggle")
+```swift
+.pickerStyle(.segmented)
+```
+![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Toggle.png "Toggle")
+```swift
+.pickerStyle(.menu)
+```
+![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Toggle.png "Toggle")
 ## Stepper
 ```swift
 struct ContentView: View {
