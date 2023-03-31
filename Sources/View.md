@@ -135,14 +135,17 @@ struct ContentView: View {
 }
 ```
 ![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Wheel.png "Wheel")
+
 ```swift
 .pickerStyle(.segmented)
 ```
 ![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Segmented.png "Segmented")
+
 ```swift
 .pickerStyle(.menu)
 ```
 ![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Menu.png "Menu")
+
 ## Stepper
 ```swift
 struct ContentView: View {
@@ -158,6 +161,8 @@ struct ContentView: View {
     }
 }
 ```
+![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Stepper.png "Stepper")
+
 ## Slider
 ```swift
 struct ContentView: View {
@@ -172,6 +177,8 @@ struct ContentView: View {
     }
 }
 ```
+![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Slider.png "Slider")
+
 ## Gesture Recognizer
 ```swift
 struct ContentView: View {
