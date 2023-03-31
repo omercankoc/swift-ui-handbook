@@ -127,6 +127,8 @@ struct RowView : View {
     }
 }
 ```
+<img src="https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/List.png" width="200" height="450">
+
 --
 ```swift
 struct ContentView: View {
