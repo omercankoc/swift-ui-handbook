@@ -57,53 +57,77 @@ struct RowView : View {
     }
 }
 ```
+# List
 ```swift
 struct ContentView: View {
     
-    @State private var textList = [String]()
+    @State private var languages : [String] = []
+    @State private var list : [String] = []
+    @State private var searchable : String = ""
     
     var body: some View {
-        
-        NavigationView {
+        NavigationStack {
             List {
-                ForEach(textList,id: \.self){ item in
-                    NavigationLink( destination: DetailView(message: item)){
-                        RowView(text: item)
+                ForEach(languages,id: \.self){ language in
+                    NavigationLink(value: language){
+                        RowView(text: language)
                     }
                 }
                 .onDelete(perform: deleteItem)
             }
-            .navigationTitle("Text List")
-            .navigationBarTitleDisplayMode(.inline)
             .listStyle(.inset)
-                
+            .navigationTitle("Languages")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(for: String.self) { language in
+                DetailView(language: language)
+            }
         }
-        .onAppear(){
-            self.textList = ["C","C++","Objective C", "Objective C++","Swift"]
+        .searchable(text: $searchable)
+        .onAppear {
+            self.list = ["C","C++","Objective-C","Java","C#","Swift","Kotlin","Rust","Go","Python","Ruby","Perl","PHP","JavaScript","Scala","Basic","Assembly","Fortran","Dart"]
+            self.languages = self.list
+        }
+        .onChange(of: searchable) { search in
+            self.languages = searchItem(search)
         }
     }
     
     func deleteItem(at offsets : IndexSet){
-        self.textList.remove(atOffsets: offsets)
+        self.languages.remove(atOffsets: offsets)
+    }
+        
+    func searchItem(_ searchable : String) -> [String]{
+        if searchable == "" {
+            return self.list
+        } else {
+            return self.languages.filter(
+                {
+                    $0.lowercased().hasPrefix(searchable.lowercased())
+                }
+            )
+        }
     }
 }
 
 struct DetailView : View {
-    var message : String
+    var language : String
+    
     var body: some View {
         HStack {
-            Text(message)
+            Text(language)
         }
     }
 }
     
 struct RowView : View {
     var text : String = ""
+    
     var body: some View {
         Text("\(text)")
     }
 }
 ```
+--
 ```swift
 struct ContentView: View {
     var body: some View {
