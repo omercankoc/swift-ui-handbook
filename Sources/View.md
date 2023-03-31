@@ -1,4 +1,4 @@
-## Binding
+# Binding
 Use a binding to create a two-way connection between a property that stores data, and a view that displays and changes the data. A binding connects a property to a source of truth stored elsewhere, instead of storing data directly. For example, a button that toggles between play and pause can create a binding to a property of its parent view using the Binding property wrapper.
 ```swift
 struct ContentView: View {
@@ -17,7 +17,7 @@ struct ContentView: View {
 }
 ```
 
-## Text
+# Text
 ```swift
  struct ContentView: View {
      var body: some View {
@@ -35,7 +35,7 @@ struct ContentView: View {
 }
 ```
 ![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Text.png "Text")
-## TextField
+# TextField
 ```swift
 struct ContentView: View {
      
@@ -66,7 +66,7 @@ struct ContentView: View {
 ```
 ![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/TextField.png "TextField")
 
-## Button
+# Button
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -109,7 +109,7 @@ struct ContentView: View {
 ```
 ![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/StrokeButton.png "Button")
 
-## Toggle
+# Toggle
 ```swift
 struct ContentView: View {
     
@@ -134,7 +134,7 @@ struct ContentView: View {
 ```
 ![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Toggle.png "Toggle")
 
-## Picker
+# Picker
 ```swift
 struct ContentView: View {
     
@@ -168,7 +168,7 @@ struct ContentView: View {
 ```
 ![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Menu.png "Menu")
 
-## Stepper
+# Stepper
 ```swift
 struct ContentView: View {
     
@@ -185,7 +185,7 @@ struct ContentView: View {
 ```
 ![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Stepper.png "Stepper")
 
-## Slider
+# Slider
 ```swift
 struct ContentView: View {
     
@@ -201,7 +201,7 @@ struct ContentView: View {
 ```
 ![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Slider.png "Slider")
 
-## Gesture Recognizer
+# Gesture Recognizer
 ```swift
 struct ContentView: View {
     
@@ -219,7 +219,7 @@ struct ContentView: View {
     }
 }
 ```
-## Image
+# Image
 ```swift
 struct ContentView: View {
     var body: some View {
