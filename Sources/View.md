@@ -67,7 +67,6 @@ struct ContentView: View {
 ![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/TextField.png "TextField")
 
 ## Button
-You create a button by providing an action and a label. The action is either a method or closure property that does something when a user clicks or taps the button.
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -87,6 +86,29 @@ struct ContentView: View {
     }
 }
 ```
+![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Button.png "Button")
+
+```swift
+struct ContentView: View {
+    var body: some View {
+        Button {
+            print("Added!")
+        } label: {
+            HStack {
+                Image(systemName: "plus")
+                Text("Add")
+            }
+            .frame(width: 200, height: 30, alignment: .center)
+            .padding(.all,10)
+            .foregroundColor(.black)
+            .background { RoundedRectangle(cornerRadius: 20).stroke(.black)}
+            .cornerRadius(20)
+        }
+    }
+}
+```
+![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/StrokeButton.png "Button")
+
 ## Toggle
 ```swift
 struct ContentView: View {
