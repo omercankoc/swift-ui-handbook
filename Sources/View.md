@@ -220,7 +220,6 @@ struct ContentView: View {
 }
 ```
 ## Image
-Use an Image instance when you want to add images to your SwiftUI app. You can create images from many sources.
 ```swift
 struct ContentView: View {
     var body: some View {
