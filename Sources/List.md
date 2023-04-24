@@ -1,63 +1,4 @@
 # List
-A List is a container that presents rows of data arranged in a single column.
-```swift
-struct ContentView: View {
-    let testArray = ["C","C++","Objective C","Swift"]
-    var body: some View {
-        List (testArray,id: \.self) { element in
-            HStack {
-                Image("apple")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 30, height: 30)
-                Text(element)
-                    .font(.body)
-            }
-        }
-    }
-}
-```
-```swift
-struct ContentView: View {
-    let testArray = ["C","C++","Objective C","Swift"]
-    var body: some View {
-        List {
-            ForEach(testArray, id: \.self){ element in
-                Text(element)
-                    .font(.body)
-            }
-        }
-    }
-}
-```
-## Dynamic List
-```swift
-struct ContentView: View {
-    @State private var textList = [String]()
-    var body: some View {
-        NavigationView {
-            List {
-                ForEach(textList,id: \.self){ item in
-                    RowView(text: item)
-                }
-            }
-            .navigationTitle("Text List")
-            .navigationBarTitleDisplayMode(.inline)
-            .listStyle(.inset)
-        }.onAppear(){
-            self.textList = ["C","C++","Objective C", "Objective C++","Swift"]
-        }
-    }
-}
-    
-struct RowView : View {
-    var text : String = ""
-    var body: some View {
-        Text("\(text)")
-    }
-}
-```
-# List
 ```swift
 struct ContentView: View {
     
@@ -127,72 +68,79 @@ struct RowView : View {
     }
 }
 ```
-<img src="https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/List.png" width="200" height="450">
 
---
+# Section
 ```swift
 struct ContentView: View {
+    
+    @State var sections : [Procedure] = []
+    
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
-                ForEach(languages) { languages in
-                    Section(header: Text(languages.title)){
-                        ForEach(languages.languageType){ language in
-                            NavigationLink(destination : DetailsView(chosenLanguage: language)){
+                ForEach(self.sections) { languages in
+                    Section(header: Text(languages.procedure)){
+                        ForEach(languages.languages){ language in
+                            NavigationLink(value: language) {
                                 Text(language.language)
                             }
                         }
                     }
                 }
-            }.navigationBarTitle(Text("Languages")
-                                    .font(.largeTitle))
+            }
+            .navigationBarTitle("Languages")
+            .navigationDestination(for: Language.self) { language in
+                DetailsView(language: language)
+            }
         }
+        .onAppear {
+            self.sections = get()
+        }
+    }
+    
+    private func get() -> [Procedure] {
+        let c = Language(language: "C")
+        let cplusplus = Language(language: "C++")
+        let java = Language(language: "Java")
+        let csharp = Language(language: "C#")
+        let python = Language(language: "Python")
+        let ruby = Language(language: "Ruby")
+        let javascript = Language(language: "JavaScript")
+        let perl = Language(language: "Perl")
+        let swift = Language(language: "Swift")
+        let kotlin = Language(language: "Kotlin")
+        let go = Language(language: "Go")
+        let rust = Language(language: "Rust")
+        let php = Language(language: "PHP")
+        
+        let compiled = Procedure(procedure: "Compiled", languages: [c,cplusplus,java,csharp,swift,kotlin,go,rust])
+        let interpreted = Procedure(procedure: "Interpreted", languages: [python,ruby,perl,javascript,php])
+        
+        return [compiled, interpreted]
     }
 }
 
 struct DetailsView: View {
     
-    var chosenLanguage : LanguageModel
+    var language : Language
     
     var body: some View {
         VStack {
-            Image(chosenLanguage.image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 4, alignment: .center)
-            Text(chosenLanguage.language)
+            Text(language.language)
                 .font(.title)
                 .foregroundColor(Color.black)
-            Text(chosenLanguage.description)
-                .font(.title3)
-                .foregroundColor(Color.gray)
         }
     }
 }
 
-struct LanguageType : Identifiable {
+struct Procedure : Identifiable, Hashable {
     var id = UUID()
-    var title : String
-    var languageType : [LanguageModel]
-    
+    var procedure : String
+    var languages : [Language]
 }
 
-struct LanguageModel : Identifiable {
+struct Language : Identifiable, Hashable {
     var id = UUID()
     var language : String
-    var image : String
-    var description : String
 }
-
-let rust = LanguageModel(language: "Rust", image: "rust", description: "Compiled")
-let kotlin = LanguageModel(language: "Kotlin", image: "kotlin", description: "Compiled")
-let swift = LanguageModel(language: "Swift", image: "swift", description: "Compiled")
-let javascript = LanguageModel(language: "JavaScript", image: "javascript", description: "Interpreted")
-let python = LanguageModel(language: "Python", image: "python", description: "Interpreted")
-let ruby = LanguageModel(language: "Ruby", image: "ruby", description: "Interpreted")
-
-let compiled = LanguageType(title: "Compiled", languageType: [rust,kotlin,swift])
-let interpreted = LanguageType(title: "Interpreted", languageType: [javascript,python,ruby])
-
-let languages = [compiled,interpreted]
 ```
