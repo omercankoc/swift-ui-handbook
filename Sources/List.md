@@ -61,16 +61,16 @@ struct RowView : View {
 ```swift
 struct ContentView: View {
     
-    @State private var languages : [String] = []
-    @State private var list : [String] = []
+    @State private var languages_ : [String] = []
+    @State private var language : [String] = []
     @State private var searchable : String = ""
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(languages,id: \.self){ language in
+                ForEach(languages_, id: \.self){ language in
                     NavigationLink(value: language){
-                        RowView(text: language)
+                        RowView(language: language)
                     }
                 }
                 .onDelete(perform: deleteItem)
@@ -84,23 +84,23 @@ struct ContentView: View {
         }
         .searchable(text: $searchable)
         .onAppear {
-            self.list = ["C","C++","Objective-C","Java","C#","Swift","Kotlin","Rust","Go","Python","Ruby","Perl","PHP","JavaScript","Scala","Basic","Assembly","Fortran","Dart"]
-            self.languages = self.list
+            self.language = ["C","C++","Objective-C","Java","C#","Swift","Kotlin","Rust","Go","Python","Ruby","Perl","PHP","JavaScript","Scala","Basic","Assembly","Fortran","Dart"]
+            self.languages_ = self.language
         }
         .onChange(of: searchable) { search in
-            self.languages = searchItem(search)
+            self.languages_ = searchItem(search)
         }
     }
     
     func deleteItem(at offsets : IndexSet){
-        self.languages.remove(atOffsets: offsets)
+        self.languages_.remove(atOffsets: offsets)
     }
         
-    func searchItem(_ searchable : String) -> [String]{
+    func searchItem(_ searchable : String) -> [String] {
         if searchable == "" {
-            return self.list
+            return self.language
         } else {
-            return self.languages.filter(
+            return self.languages_.filter(
                 {
                     $0.lowercased().hasPrefix(searchable.lowercased())
                 }
@@ -120,10 +120,10 @@ struct DetailView : View {
 }
     
 struct RowView : View {
-    var text : String = ""
+    var language : String = ""
     
     var body: some View {
-        Text("\(text)")
+        Text("\(language)")
     }
 }
 ```
