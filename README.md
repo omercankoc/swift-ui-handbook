@@ -1,17 +1,17 @@
 # SwiftUI
 
-[1. Widgets](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md)
-- Binding
-- Text
-- TextField
-- Button
-- Toogle
-- Picker
-- Stepper
-- Slider
-- Gesture Recognizer
-- Image
-- Async Image
+### [Widgets]
+- [Binding](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#binding)
+- [Text](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#text)
+- [TextField](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#textfield)
+- [Button](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#button)
+- [Toogle](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#toggle)
+- [Picker](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#picker)
+- [Stepper](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#stepper)
+- [Slider](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#slider)
+- [Gesture Recognizer](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#gesture-recognizer)
+- [Image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#image)
+- [Async Image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#asyncimage)
 
 [2. Desing](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md)
 - HStack
