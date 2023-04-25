@@ -1,6 +1,6 @@
 # SwiftUI
 
-1. [Widgets](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md)
+[1. Widgets](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md)
 - Binding
 - Text
 - TextField
@@ -13,7 +13,7 @@
 - Image
 - Async Image
 
-2. [Desing](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md)
+[2. Desing](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md)
 - HStack
 - VStack
 - ZStack
@@ -24,7 +24,7 @@
 - Geometry Reader
 - Scroll View
 
-3. [Routing](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Routing.md)
+[3. Routing](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Routing.md)
 - Sheet
 - Full Screen Cover
 - Popover
@@ -32,11 +32,11 @@
 - Toolbar
 - Tab View
 
-4. [Listing](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/List.md)
+[4. Listing](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/List.md)
 - List
 - Section
 
-5. [Data Sharing](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataSharing.md)
+[5. Data Sharing](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataSharing.md)
 - Observer Object and Binding
 - State Object and Environment Object
 
