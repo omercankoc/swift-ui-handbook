@@ -40,6 +40,6 @@
 - [Observer Object and Binding](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataSharing.md#observer-object-and-binding)
 - [State Object and Environment Object](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataSharing.md#state-object-and-environment-object)
 
-References
+### References
 - https://developer.apple.com/tutorials/swiftui
 - https://www.hackingwithswift.com
