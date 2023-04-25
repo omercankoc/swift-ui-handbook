@@ -1,4 +1,4 @@
-# Sheets
+# Sheet
 
 SwiftUI’s sheets are used to present new views over existing ones, while still allowing users to drag down to dismiss the new view when they are ready.
 
@@ -234,7 +234,7 @@ struct ContentView: View {
 }
 ```
 
-# Tab Bar
+# Tab View
 
 When you want to show two separate views with SwiftUI, the easiest and most user-intuitive approach is with a tab bar across the bottom of our app. In our case, that means we’ll put our menu view in one tab and the active order in another. SwiftUI gives us a TabView for just this purpose, and it works much like a UITabBarController.
 
