@@ -48,6 +48,8 @@ struct DetailView : View {
     }
 }
 ```
+![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/ShowSheet.png "Text")
+![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/DismissSheet.png "Text")
 
 # Full Screen Cover
 
