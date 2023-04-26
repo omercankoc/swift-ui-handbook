@@ -46,7 +46,7 @@ struct ContentView: View {
         VStack {
             TextField("Username",text: $username)
                 .padding(.leading,10)
-                .keyboardType(.numberPad)
+                .keyboardType(.alphabet)
                 .frame(width: 300, height: 40, alignment: .center)
                 .background {
                     RoundedRectangle(cornerRadius: 10)
