@@ -3,6 +3,7 @@
 Individually, HStack, VStack, and ZStack are simple views. HStack positions views in a horizontal line, VStack positions them in a vertical line, and ZStack overlays views on top of one another.
 
 ## HStack
+Unlike LazyHStack, which only renders the views when your app needs to display them onscreen, an HStack renders the views all at once, regardless of whether they are on- or offscreen. Use the regular HStack when you have a small number of subviews or don’t want the delayed rendering behavior of the “lazy” version.
 ```swift
 var body: some View {
     HStack {
@@ -17,6 +18,7 @@ var body: some View {
 }
 ```
 ## VStack
+Unlike LazyVStack, which only renders the views when your app needs to display them, a VStack renders the views all at once, regardless of whether they are on- or offscreen. Use the regular VStack when you have a small number of subviews or don’t want the delayed rendering behavior of the “lazy” version.
 ```swift
 var body: some View {
     VStack {
@@ -31,6 +33,7 @@ var body: some View {
 }
 ```
 ## ZStack
+The ZStack assigns each successive subview a higher z-axis value than the one before it, meaning later subviews appear “on top” of earlier ones.
 ```swift
 var body: some View {
     ZStack {
