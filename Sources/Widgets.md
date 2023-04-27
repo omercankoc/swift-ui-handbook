@@ -1,5 +1,4 @@
-# Binding
-Use a binding to create a two-way connection between a property that stores data, and a view that displays and changes the data. A binding connects a property to a source of truth stored elsewhere, instead of storing data directly. For example, a button that toggles between play and pause can create a binding to a property of its parent view using the Binding property wrapper.
+# State
 ```swift
 struct ContentView: View {
     
@@ -34,14 +33,27 @@ struct ContentView: View {
     }
 }
 ```
-![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Text.png "Text")
+
+# Label
+```swift
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Label("Rain", systemImage: "cloud.rain")
+            Label("Snow", systemImage: "snow")
+            Label("Sun", systemImage: "sun.max")
+        }
+        .labelStyle(.titleAndIcon)
+    }
+}
+```
+
 # TextField
 ```swift
 struct ContentView: View {
      
     @State private var username : String = ""
-    @State private var password : String = ""
-         
+    
     var body: some View {
         VStack {
             TextField("Username",text: $username)
@@ -52,21 +64,47 @@ struct ContentView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(.black)
                 }
+        }
+    }
+}
+```
+# SecureField
+```swift
+struct ContentView: View {
+     
+    @State private var password : String = ""
+         
+    var body: some View {
+        VStack {
             SecureField("Password",text: $password)
                 .padding(.leading,10)
                 .keyboardType(.default)
                 .frame(width: 300, height: 40, alignment: .center)
                 .background {
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(.black)   
+                        .stroke(.black)
                 }
         }
     }
 }
 ```
-![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/TextField.png "TextField")
+# TextEditor
+```swift
+struct ContentView: View {
+     
+    @State private var content: String = "This is some editable text..."
+
+    var body: some View {
+        TextEditor(text: $content)
+            .foregroundColor(Color.gray)
+            .font(.custom("HelveticaNeue", size: 13))
+            .lineSpacing(5)
+    }
+}
+```
 
 # Button
+### Angled
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -86,8 +124,8 @@ struct ContentView: View {
     }
 }
 ```
-![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Button.png "Button")
 
+### Angled and Framed
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -107,7 +145,6 @@ struct ContentView: View {
     }
 }
 ```
-![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/StrokeButton.png "Button")
 
 # Toggle
 ```swift
@@ -132,7 +169,6 @@ struct ContentView: View {
     }
 }
 ```
-![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Toggle.png "Toggle")
 
 # Picker
 ```swift
@@ -156,17 +192,14 @@ struct ContentView: View {
     }
 }
 ```
-![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Wheel.png "Wheel")
 
 ```swift
 .pickerStyle(.segmented)
 ```
-![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Segmented.png "Segmented")
 
 ```swift
 .pickerStyle(.menu)
 ```
-![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Menu.png "Menu")
 
 # Stepper
 ```swift
@@ -183,7 +216,6 @@ struct ContentView: View {
     }
 }
 ```
-![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Stepper.png "Stepper")
 
 # Slider
 ```swift
@@ -199,7 +231,6 @@ struct ContentView: View {
     }
 }
 ```
-![image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Images/Slider.png "Slider")
 
 # Gesture Recognizer
 ```swift
