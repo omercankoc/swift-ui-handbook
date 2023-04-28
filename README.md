@@ -1,7 +1,7 @@
 # SwiftUI
 
 ### Widgets
-- [Binding](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#binding)
+- [State](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#state)
 - [Text](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#text)
 - [TextField](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#textfield)
 - [Button](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Widgets.md#button)
