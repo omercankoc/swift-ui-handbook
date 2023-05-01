@@ -1,21 +1,3 @@
-# State
-```swift
-struct ContentView: View {
-    
-    @State var name = "Omer"
-    
-    var body: some View {
-        VStack {
-            Text(name)
-                .padding()
-                .font(.title)
-            TextField("placeholder",text: $name)
-                .padding()
-        }
-    }
-}
-```
-
 # Text
 ```swift
  struct ContentView: View {
