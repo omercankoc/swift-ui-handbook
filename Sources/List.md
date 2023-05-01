@@ -1,7 +1,4 @@
 # List
-The list is a complex container type that automatically provides scrolling when it grows too large for the current display. You build a list by providing it with individual views for the rows in the list, or by using a ForEach to enumerate a group of rows. You can also mix these strategies, blending any number of individual views and ForEach constructs.
-
-Use view modifiers to configure the appearance and behavior of a list and its rows, headers, sections, and separators. For example, you can apply a style to the list, add swipe gestures to individual rows, or make the list refreshable with a pull-down gesture. You can also use the configuration associated with Scroll views to control the list’s implicit scrolling behavior.
 ```swift
 struct ContentView: View {
     
@@ -73,7 +70,6 @@ struct RowView : View {
 ```
 
 # Section
-SwiftUI’s list view has built-in support for sections and section headers, just like UITableView in UIKit. To add a section around some cells, start by placing a Section around it, optionally also adding a header and footer.
 ```swift
 struct ContentView: View {
     
