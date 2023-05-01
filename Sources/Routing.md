@@ -1,9 +1,4 @@
 # Sheet
-
-SwiftUI’s sheets are used to present new views over existing ones, while still allowing users to drag down to dismiss the new view when they are ready.
-
-To use a sheet, give it something to show (some text, an image, a custom view, etc), add a Boolean that defines whether the detail view should be showing, then attach it to your main view as a modal sheet.
-
 ```swift
 struct ContentView: View {
     
@@ -50,11 +45,6 @@ struct DetailView : View {
 ```
 
 # Full Screen Cover
-
-SwiftUI’s fullScreenCover() modifier gives us a presentation style for times when you want to cover as much of the screen as possible, and in code it works almost identically to regular sheets.
-
-Regular sheets can be dismissed by dragging downwards on them, but that isn’t possible with views presented using fullScreenCover(). As a result, it’s important you provide a way to dismiss the presented view, probably using the dismiss environment key.
-
 ```swift
 struct ContentView: View {
     
@@ -101,11 +91,6 @@ struct DetailView : View {
 ```
 
 # Popover
-
-SwiftUI has a dedicated modifier for showing popovers, which on iPadOS appear as floating balloons and on iOS slide onto the screen like a sheet.
-
-To show a popover you need some state that determines whether the popover is currently visible, but that’s about it – unlike alerts and action sheets, popovers can contain any kind of view you want. So, just place whatever you need inside the popover and SwiftUI will take care of the rest.
-
 ```swift
 struct ContentView: View {
     
@@ -152,9 +137,6 @@ struct DetailView : View {
 ```
 
 # Navigation Stack
-
-NavigationView is one of the most important components of a SwiftUI app, allowing us to push and pop screens with ease, presenting information in a clear, hierarchical way for users.
-
 ```swift
 struct Person : Hashable {
     var name : String?
@@ -196,9 +178,6 @@ struct DetailView : View {
 ```
 
 # Toolbar
-
-If we ask for it, iOS allows us to place content anywhere on the screen, including under the system clock at the top and the home indicator at the bottom. This doesn’t look great, which is why by default SwiftUI ensures components are placed in an area where they can’t be covered up by system UI or device rounded corners – an area known as the safe area.
-
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -235,9 +214,6 @@ struct ContentView: View {
 ```
 
 # Tab View
-
-When you want to show two separate views with SwiftUI, the easiest and most user-intuitive approach is with a tab bar across the bottom of our app. In our case, that means we’ll put our menu view in one tab and the active order in another. SwiftUI gives us a TabView for just this purpose, and it works much like a UITabBarController.
-
 ```swift
 struct ContentView: View {
     var body: some View {
