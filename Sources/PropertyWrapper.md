@@ -1,3 +1,20 @@
+# State
+```swift
+struct ContentView: View {
+    
+    @State var name = "Omer"
+    
+    var body: some View {
+        VStack {
+            Text(name)
+                .padding()
+                .font(.title)
+            TextField("placeholder",text: $name)
+                .padding()
+        }
+    }
+}
+```
 # Observer Object and Binding
 A design pattern that notifies all items in a list of changes in an object.
  - ObservableObject : Creates a class for data sharing. It must inherit the "ObservableObject" class. The properties in it must be "Published". This properties will be shared across all interfaces.
