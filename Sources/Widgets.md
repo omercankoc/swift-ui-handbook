@@ -1,4 +1,4 @@
-# Text
+### Text
 ```swift
  struct ContentView: View {
      var body: some View {
@@ -16,7 +16,7 @@
 }
 ```
 
-# Label
+### Label
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -30,7 +30,7 @@ struct ContentView: View {
 }
 ```
 
-# TextField
+### TextField
 ```swift
 struct ContentView: View {
      
@@ -50,7 +50,7 @@ struct ContentView: View {
     }
 }
 ```
-# SecureField
+### SecureField
 ```swift
 struct ContentView: View {
      
@@ -70,7 +70,7 @@ struct ContentView: View {
     }
 }
 ```
-# TextEditor
+### TextEditor
 ```swift
 struct ContentView: View {
      
@@ -85,8 +85,8 @@ struct ContentView: View {
 }
 ```
 
-# Button
-### Angled
+### Button
+- Angled
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -107,7 +107,7 @@ struct ContentView: View {
 }
 ```
 
-### Angled and Framed
+- Angled and Framed
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -128,7 +128,7 @@ struct ContentView: View {
 }
 ```
 
-# Toggle
+### Toggle
 ```swift
 struct ContentView: View {
     
@@ -152,7 +152,7 @@ struct ContentView: View {
 }
 ```
 
-# Picker
+### Picker
 ```swift
 struct ContentView: View {
     
@@ -183,7 +183,7 @@ struct ContentView: View {
 .pickerStyle(.menu)
 ```
 
-# Stepper
+### Stepper
 ```swift
 struct ContentView: View {
     
@@ -199,7 +199,7 @@ struct ContentView: View {
 }
 ```
 
-# Slider
+### Slider
 ```swift
 struct ContentView: View {
     
@@ -214,7 +214,7 @@ struct ContentView: View {
 }
 ```
 
-# Gesture Recognizer
+### Gesture Recognizer
 ```swift
 struct ContentView: View {
     
@@ -232,7 +232,7 @@ struct ContentView: View {
     }
 }
 ```
-# Image
+### Image
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -245,14 +245,14 @@ struct ContentView: View {
     }
 }
 ```
-# AsyncImage
+### AsyncImage
  
-### Declaration
+- Declaration
 ```swift
 struct AsyncImage<Content> where Content : View
 ```
 
-### Overview
+- Overview
 This view uses the shared URLSession instance to load an image from the specified URL, and then display it. For example, you can display an icon that’s stored on a server:
 
 ```swift
@@ -273,7 +273,7 @@ AsyncImage(url: URL(string: "https://example.com/icon.png")) { image in
 .frame(width: 50, height: 50)
 ```
 
-### Important
+- Important
 You can’t apply image-specific modifiers, like resizable(capInsets:resizingMode:), directly to an AsyncImage. Instead, apply them to the Image instance that your content closure gets when defining the view’s appearance.
 
 To gain more control over the loading process, use the init(url:scale:transaction:content:) initializer, which takes a content closure that receives an AsyncImagePhase to indicate the state of the loading operation. Return a view that’s appropriate for the current phase:
