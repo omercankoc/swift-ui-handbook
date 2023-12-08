@@ -1,22 +1,24 @@
-### Text
+## Text
+A view that displays one or more lines of read-only text.
 ```swift
- struct ContentView: View {
-     var body: some View {
-         Text("Hello, SwiftUI!")
-             .font(.body)
-             .bold()
-             .foregroundColor(Color.black)
-             .padding(.all,10)
-             .background {
-                 RoundedRectangle(cornerRadius: 10)
-                     .stroke(Color.black)
-                     .frame(width: 200, height: 50, alignment: .center)
-             }
+struct ContentView: View {
+    var body: some View {
+        Text("Hello, SwiftUI!")
+            .font(.body)
+            .bold()
+            .foregroundColor(Color.black)
+            .padding(.all, 10)
+            .background {
+                RoundedRectangle(cornerRadius: 30)
+                    .stroke(Color.black)
+                    .frame(width: 150, height: 50, alignment: .center)
+            }
     }
 }
 ```
 
-### Label
+## Label
+A standard label for user interface items, consisting of an icon with a title.
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -30,16 +32,16 @@ struct ContentView: View {
 }
 ```
 
-### TextField
+## TextField
+A control that displays an editable text interface.
 ```swift
 struct ContentView: View {
-     
     @State private var username : String = ""
     
     var body: some View {
         VStack {
             TextField("Username",text: $username)
-                .padding(.leading,10)
+                .padding(.leading, 10)
                 .keyboardType(.alphabet)
                 .frame(width: 300, height: 40, alignment: .center)
                 .background {
@@ -50,10 +52,10 @@ struct ContentView: View {
     }
 }
 ```
-### SecureField
+## SecureField
+A control into which the user securely enters private text.
 ```swift
 struct ContentView: View {
-     
     @State private var password : String = ""
          
     var body: some View {
@@ -71,15 +73,17 @@ struct ContentView: View {
 }
 ```
 ### TextEditor
+A view that can display and edit long-form text.
 ```swift
 struct ContentView: View {
-     
     @State private var content: String = "This is some editable text..."
 
     var body: some View {
         TextEditor(text: $content)
             .foregroundColor(Color.gray)
-            .font(.custom("HelveticaNeue", size: 13))
+            .font(
+                .custom("HelveticaNeue", size: 13)
+            )
             .lineSpacing(5)
     }
 }
