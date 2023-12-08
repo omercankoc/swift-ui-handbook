@@ -68,68 +68,109 @@ struct ContentView: View {
 ```
 
 ## Alignment and Spacing
+Modify the alignment and spacing between elements.
 ```swift
-VStack(alignment: .leading, spacing: 10){
-    Text("First")
-    Text("Second")
-    Text("Third")
+struct ContentView: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10){
+            Text("First")
+            Text("Second")
+            Text("Third")
+        }
+    }
 }
 ```
 ```swift
-HStack(alignment: .top, spacing: 10){
-    Text("First")
-    Text("Second")
-    Text("Third")
+struct ContentView: View {
+    var body: some View {
+        HStack(alignment: .top, spacing: 10){
+            Text("First")
+            Text("Second")
+            Text("Third")
+        }
+    }
 }
 ```
 
 ## Spacer
+A flexible space that expands along the major axis of its containing stack layout, or on both axes if not contained in a stack.
 ```swift
-Text("First")
-Spacer()
-Text("Second")
-```
-```swift
-VStack{
-     Text("First")
-     Spacer().frame(height: 10)
-     Text("Second")
+struct ContentView: View {
+    var body: some View {
+        Text("First")
+        Spacer()
+        Text("Second")    }
 }
 ```
 ```swift
-HStack{
-     Text("First")
-     Spacer().frame(width: 10)
-     Text("Second")
+struct ContentView: View {
+    var body: some View {
+        VStack{
+             Text("First")
+             Spacer().frame(height: 10)
+             Text("Second")
+        }
+    }
 }
-``` 
+```
+```swift
+struct ContentView: View {
+    var body: some View {
+        HStack{
+             Text("First")
+             Spacer().frame(width: 10)
+             Text("Second")
+        }
+    }
+}
+```
+
 ## Padding
+Adds an equal padding amount to specific edges of this view.
 ```swift
-HStack{
-    Text("First").padding(.top,10)
-    Text("Second").padding(.bottom,10)
-    Text("Third").padding(.leading,10)
-    Text("Fourth").padding(.trailing,10)
-    Text("Fifth").padding(.all,5)
-    Text("Sixth").padding()
+struct ContentView: View {
+    var body: some View {
+        HStack{
+            Text("First").padding(.top,10)
+            Text("Second").padding(.bottom,10)
+            Text("Third").padding(.leading,10)
+            Text("Fourth").padding(.trailing,10)
+            Text("Fifth").padding(.all,5)
+            Text("Sixth").padding()
+        }
+    }
 }
 ```
+
 ## Frame
+The frame rectangle, which describes the view’s location and size in its superview’s coordinate system.
 ```swift
-Text("Sixth")
-    .frame(width: 100, height: 100, alignment: .center)
-```
-## GeometryReader 
-```swift
-GeometryReader { geometry in
-    VStack(){
-        Text("Swift")
-        Text("Objective C")
-        Text("C++")
-        Text("C")
-    }.frame(width: geometry.size.width/3, height: geometry.size.height/10, alignment: .center)    
+struct ContentView: View {
+    var body: some View {
+        Text("SwiftUI and Swift")
+            .frame(width: 300, height: 50, alignment: .center)
+    }
 }
 ```
+
+## GeometryReader 
+A container view that defines its content as a function of its own size and coordinate space.
+```swift
+struct ContentView: View {
+    var body: some View {
+        GeometryReader { geometry in
+            VStack {
+                Text("Swift")
+                Text("Objective C")
+                Text("C++")
+                Text("C")
+            }
+            .frame(width: geometry.size.width, height: geometry.size.height,  alignment: .center)
+        }
+    }
+}
+```
+
 ## ScrollView
 A scrollable view.
 ```swift
@@ -282,13 +323,4 @@ struct ContentView: View {
         return String(Character(scalar))
     }
 }
-```
-
-```swift
-```
-
-```swift
-```
-
-```swift
 ```
