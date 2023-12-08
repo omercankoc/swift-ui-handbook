@@ -236,7 +236,7 @@ A view that arranges its children in a line that grows horizontally, creating it
 ```swift
 struct ContentView: View {
     var body: some View {
-        ScrollView() {
+        ScrollView(.horizontal) {
             LazyHStack(alignment: .center, spacing: 10) {
                 ForEach(1...100, id: \.self) {
                     Text("\($0)")
@@ -258,7 +258,7 @@ A view that arranges its children in a line that grows vertically, creating item
 ```swift
 struct ContentView: View {
     var body: some View {
-        ScrollView() {
+        ScrollView(.vertical) {
             LazyVStack(alignment: .center, spacing: 10) {
                 ForEach(1...100, id: \.self) {
                     Text("\($0)")
