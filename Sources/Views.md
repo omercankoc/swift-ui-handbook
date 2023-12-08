@@ -236,6 +236,7 @@ struct ContentView: View {
     }
 }
 ```
+
 ### Image
 ```swift
 struct ContentView: View {
@@ -290,6 +291,60 @@ AsyncImage(url: URL(string: "https://example.com/icon.png")) { phase in
         Color.red // Indicates an error.
     } else {
         Color.blue // Acts as a placeholder.
+    }
+}
+```
+## Menu
+A control for presenting a menu of actions.
+```swift
+struct ContentView: View {
+    var body: some View {
+        Menu {
+            Button {
+                log("Mail")
+            } label: {
+                Label("Mail", systemImage: "envelope")
+            }
+            
+            Button {
+                log("Message")
+            } label: {
+                Label("Message", systemImage: "message")
+            }
+            
+            Menu("More") {
+                Button {
+                    log("Whatsapp")
+                } label: {
+                    Label("Whatsapp", systemImage: "arrow.up")
+                }
+                
+                Button {
+                    log("Messenger")
+                } label: {
+                    Label("Messenger", systemImage: "arrow.up")
+                }
+                
+                Button {
+                    log("Telegram")
+                } label: {
+                    Label("Telegram", systemImage: "arrow.up")
+                }
+                
+                Button {
+                    log("WeChat")
+                } label: {
+                    Label("WeChat", systemImage: "arrow.up")
+                }
+            }
+            
+        } label: {
+            Label("Share", systemImage: "paperplane")
+        }
+    }
+    
+    func log(_ key : String){
+        print(key)
     }
 }
 ```
