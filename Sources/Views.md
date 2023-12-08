@@ -72,7 +72,7 @@ struct ContentView: View {
     }
 }
 ```
-### TextEditor
+## TextEditor
 A view that can display and edit long-form text.
 ```swift
 struct ContentView: View {
@@ -89,7 +89,8 @@ struct ContentView: View {
 }
 ```
 
-### Button
+## Button
+A control that initiates an action.
 - Angled
 ```swift
 struct ContentView: View {
@@ -101,11 +102,12 @@ struct ContentView: View {
                 Image(systemName: "plus")
                 Text("Add")
             }
-            .frame(width: 90, height: 30, alignment: .center)
-            .padding(.all,10)
             .foregroundColor(.black)
-            .background(.green)
-            .cornerRadius(20)
+            .background {
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(.green)
+                    .frame(width: 100, height: 40, alignment: .center)
+            }
         }
     }
 }
@@ -122,20 +124,21 @@ struct ContentView: View {
                 Image(systemName: "plus")
                 Text("Add")
             }
-            .frame(width: 200, height: 30, alignment: .center)
-            .padding(.all,10)
             .foregroundColor(.black)
-            .background { RoundedRectangle(cornerRadius: 20).stroke(.black)}
-            .cornerRadius(20)
+            .background {
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(.black)
+                    .frame(width: 100, height: 40, alignment: .center)
+            }
         }
     }
 }
 ```
 
-### Toggle
+## Toggle
+A control that toggles between on and off states.
 ```swift
 struct ContentView: View {
-    
     @State private var logic : Bool = false
     
     var body: some View {
@@ -150,13 +153,13 @@ struct ContentView: View {
                 Text("FALSE")
             }
         }
-        .padding(.trailing,10)
-        .padding(.leading,10)
+        .padding(.trailing,20)
+        .padding(.leading,20)
     }
 }
 ```
 
-### Picker
+## Picker
 ```swift
 struct ContentView: View {
     
@@ -187,33 +190,41 @@ struct ContentView: View {
 .pickerStyle(.menu)
 ```
 
-### Stepper
+## Stepper
+A control that performs increment and decrement actions.
 ```swift
 struct ContentView: View {
-    
     @State private var value : Int = 0
     
     var body: some View {
         VStack {
-            Stepper("Run +-1",value: $value,in:0...11)
-            Stepper("Run +-2", onIncrement: { self.value = self.value + 2 },onDecrement: { self.value = self.value - 2 })
+            Stepper("Run +-1",value: $value, in: 0...11)
+            Stepper("Run +-2", 
+                    onIncrement: {
+                self.value = self.value + 2
+            },
+                    onDecrement: {
+                self.value = self.value - 2
+            })
             Text("Select : \(value)")
-        }.padding(.all,10)
+        }
+        .padding(.all, 10)
     }
 }
 ```
 
 ### Slider
+A control for selecting a value from a bounded linear range of values.
 ```swift
 struct ContentView: View {
-    
     @State private var value : Double = 0
     
     var body: some View {
         VStack {
             Slider(value: $value, in: 0...10,step: 1)
             Text("Select : \(Int(value))")
-        }.padding(.all,10)
+        }
+        .padding(.all,10)
     }
 }
 ```
