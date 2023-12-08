@@ -119,7 +119,7 @@ HStack{
 Text("Sixth")
     .frame(width: 100, height: 100, alignment: .center)
 ```
-## Geometry Reader 
+## GeometryReader 
 ```swift
 GeometryReader { geometry in
     VStack(){
@@ -130,7 +130,7 @@ GeometryReader { geometry in
     }.frame(width: geometry.size.width/3, height: geometry.size.height/10, alignment: .center)    
 }
 ```
-## Scroll View
+## ScrollView
 A scrollable view.
 ```swift
 struct ContentView: View {
@@ -147,6 +147,47 @@ struct ContentView: View {
                 }
             }
         }
+    }
+}
+```
+
+## ScrollViewReader
+A view that provides programmatic scrolling, by working with a proxy to scroll to known child views.
+```swift
+struct ContentView: View {
+    
+    @Namespace var topID
+    @Namespace var bottomID
+    
+    var body: some View {
+        ScrollViewReader { proxy in
+            ScrollView {
+                Button("Scroll to Bottom") {
+                    withAnimation {
+                        proxy.scrollTo(bottomID)
+                    }
+                }
+                .id(topID)
+
+                VStack(spacing: 0) {
+                    ForEach(0..<100) { i in
+                        color(fraction: Double(i) / 100)
+                            .frame(height: 32)
+                    }
+                }
+
+                Button("Top") {
+                    withAnimation {
+                        proxy.scrollTo(topID)
+                    }
+                }
+                .id(bottomID)
+            }
+        }
+    }
+
+    func color(fraction: Double) -> Color {
+        Color(red: fraction, green: 1 - fraction, blue: 0.5)
     }
 }
 ```
