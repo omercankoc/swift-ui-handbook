@@ -137,13 +137,11 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geometry in
             ScrollView(.vertical) {
-                VStack(alignment: .center, spacing: 5){
-                    ForEach(0...10, id: \.self){ iterator in
-                        Text("ITEM : \(iterator)")
-                            .font(.body)
-                            .frame(width: geometry.size.width, height: geometry.size.height / 5, alignment: .center)
-                            .background(Color.green)
-                    }
+                ForEach(0...25, id: \.self){ iterator in
+                    Text("ITEM : \(iterator)")
+                        .font(.body)
+                        .frame(width: geometry.size.width, height: geometry.size.height / 5, alignment: .center)
+                        .background(Color.green)
                 }
             }
         }
