@@ -12,6 +12,8 @@ One of the most important features of SwiftUI is the ability to provide a real-t
 - [Text](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#text)
 - [Label](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#label)
 - [TextField](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#textfield)
+- [SecureField](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#securefield)
+- [TextEditor](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#texteditor)
 - [Button](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#button)
 - [Toogle](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#toggle)
 - [Picker](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#picker)
@@ -20,6 +22,7 @@ One of the most important features of SwiftUI is the ability to provide a real-t
 - [Gesture Recognizer](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#gesture-recognizer)
 - [Image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#image)
 - [Async Image](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#asyncimage)
+- [Menu](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#menu)
 
 ### Desing
 - [HStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#hstack)
