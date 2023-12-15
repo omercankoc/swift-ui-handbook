@@ -1,5 +1,6 @@
 ## Text
 A view that displays one or more lines of read-only text.
+
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -18,6 +19,7 @@ struct ContentView: View {
 
 ## Label
 A standard label for user interface items, consisting of an icon with a title.
+
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -33,6 +35,7 @@ struct ContentView: View {
 
 ## TextField
 A control that displays an editable text interface.
+
 ```swift
 struct ContentView: View {
     @State private var username : String = ""
@@ -53,6 +56,7 @@ struct ContentView: View {
 ```
 ## SecureField
 A control into which the user securely enters private text.
+
 ```swift
 struct ContentView: View {
     @State private var password : String = ""
@@ -71,8 +75,10 @@ struct ContentView: View {
     }
 }
 ```
+
 ## TextEditor
 A view that can display and edit long-form text.
+
 ```swift
 struct ContentView: View {
     @State private var content: String = "This is some editable text..."
@@ -90,7 +96,9 @@ struct ContentView: View {
 
 ## Button
 A control that initiates an action.
+
 - Angled and Filled
+
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -113,6 +121,7 @@ struct ContentView: View {
 ```
 
 - Angled and Framed
+
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -136,6 +145,7 @@ struct ContentView: View {
 
 ## Toggle
 A control that toggles between on and off states.
+
 ```swift
 struct ContentView: View {
     @State private var logic : Bool = false
@@ -160,6 +170,7 @@ struct ContentView: View {
 
 ## Picker
 A control for selecting from a set of mutually exclusive values.
+
 ```swift
 struct ContentView: View {
     
@@ -192,6 +203,7 @@ struct ContentView: View {
 
 ## Stepper
 A control that performs increment and decrement actions.
+
 ```swift
 struct ContentView: View {
     @State private var value : Int = 0
@@ -215,6 +227,7 @@ struct ContentView: View {
 
 ## Slider
 A control for selecting a value from a bounded linear range of values.
+
 ```swift
 struct ContentView: View {
     @State private var value : Double = 0
@@ -231,6 +244,7 @@ struct ContentView: View {
 
 ## Gesture Recognizer
 The base class for concrete gesture recognizers.
+
 ```swift
 struct ContentView: View {
     @State private var status : String = "Gesture"
@@ -257,6 +271,7 @@ struct ContentView: View {
 
 ## Image
 A view that displays an image.
+
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -267,8 +282,10 @@ struct ContentView: View {
     }
 }
 ```
+
 ## AsyncImage
-A view that asynchronously loads and displays an image. 
+A view that asynchronously loads and displays an image.
+
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -287,6 +304,7 @@ struct ContentView: View {
 
 ### AsyncImage Phase
 The current phase of the asynchronous image loading operation.
+
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -309,6 +327,7 @@ struct ContentView: View {
 
 ## Menu
 A control for presenting a menu of actions.
+
 ```swift
 struct ContentView: View {
    
