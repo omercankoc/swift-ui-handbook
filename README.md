@@ -1,5 +1,13 @@
 # SwiftUI
 
+SwiftUI is a development framework for building user interfaces for iOS, iPadOS, watchOS, tvOS and macOS, from Apple Inc
+
+SwiftUI was first introduced at Apple's WWDC event in 2019 and provides simplicity, flexibility, and seamless integration with Apple's Swift programming language.
+
+UIKit (Imperative) requires defining each user interface mandatorily. SwiftUI (Declarative) can define the desired user interface and behavior using a set of structured expressions.
+
+One of the most important features of SwiftUI is the ability to provide a real-time preview of the UI while coding. Developers can see the changes they make in the code reflected in the preview, facilitating rapid prototyping and iterative design. SwiftUI also includes a powerful data binding mechanism, enabling automatic synchronization between the UI and the underlying data models. When the data changes, the UI updates automatically, reducing the need for manual updating and synchronization.
+
 ### Widgets
 - [Text](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md)
 - [TextField](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#textfield)
