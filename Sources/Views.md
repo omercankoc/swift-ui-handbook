@@ -98,7 +98,6 @@ struct ContentView: View {
 A control that initiates an action.
 
 - Angled and Filled
-
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -121,7 +120,6 @@ struct ContentView: View {
 ```
 
 - Angled and Framed
-
 ```swift
 struct ContentView: View {
     var body: some View {
