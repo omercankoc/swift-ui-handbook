@@ -9,7 +9,8 @@ UIKit (Imperative) requires defining each user interface mandatorily. SwiftUI (D
 One of the most important features of SwiftUI is the ability to provide a real-time preview of the UI while coding. Developers can see the changes they make in the code reflected in the preview, facilitating rapid prototyping and iterative design. SwiftUI also includes a powerful data binding mechanism, enabling automatic synchronization between the UI and the underlying data models. When the data changes, the UI updates automatically, reducing the need for manual updating and synchronization.
 
 ### Widgets
-- [Text](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md)
+- [Text](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#text)
+- [Label](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#label)
 - [TextField](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#textfield)
 - [Button](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#button)
 - [Toogle](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#toggle)
