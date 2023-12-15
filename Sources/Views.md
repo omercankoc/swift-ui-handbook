@@ -163,14 +163,14 @@ A control for selecting from a set of mutually exclusive values.
 ```swift
 struct ContentView: View {
     
-    @State private var select : Int = 0
+    @State private var select : Int = 1
     
     var body: some View {
         VStack {
             Picker(selection: $select, label: Text("")){
-                Text("First").tag(0)
-                Text("Second").tag(1)
-                Text("Third").tag(2)
+                Text("First").tag(1)
+                Text("Second").tag(2)
+                Text("Third").tag(3)
             }
             .pickerStyle(.wheel)
             
@@ -311,16 +311,24 @@ struct ContentView: View {
 A control for presenting a menu of actions.
 ```swift
 struct ContentView: View {
+   
+    @State var menuLabel : String = "Share"
+    @State var menuImage : String = "paperplane"
+   
     var body: some View {
         Menu {
             Button {
                 log("Mail")
+                self.menuLabel = "Mail"
+                self.menuImage = "envelope"
             } label: {
                 Label("Mail", systemImage: "envelope")
             }
             
             Button {
                 log("Message")
+                self.menuLabel = "Message"
+                self.menuImage = "message"
             } label: {
                 Label("Message", systemImage: "message")
             }
@@ -328,31 +336,39 @@ struct ContentView: View {
             Menu("More") {
                 Button {
                     log("Whatsapp")
+                    self.menuLabel = "Whatsapp"
+                    self.menuImage = "arrow.up"
                 } label: {
                     Label("Whatsapp", systemImage: "arrow.up")
                 }
                 
                 Button {
                     log("Messenger")
+                    self.menuLabel = "Messenger"
+                    self.menuImage = "arrow.up"
                 } label: {
                     Label("Messenger", systemImage: "arrow.up")
                 }
                 
                 Button {
                     log("Telegram")
+                    self.menuLabel = "Telegram"
+                    self.menuImage = "arrow.up"
                 } label: {
                     Label("Telegram", systemImage: "arrow.up")
                 }
                 
                 Button {
                     log("WeChat")
+                    self.menuLabel = "WeChat"
+                    self.menuImage = "arrow.up"
                 } label: {
                     Label("WeChat", systemImage: "arrow.up")
                 }
             }
             
         } label: {
-            Label("Share", systemImage: "paperplane")
+            Label(self.menuLabel, systemImage: self.menuImage)
         }
     }
     
