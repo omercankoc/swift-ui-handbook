@@ -285,7 +285,7 @@ struct ContentView: View {
 }
 ```
 
-## AsyncImagePhase
+### AsyncImage Phase
 The current phase of the asynchronous image loading operation.
 ```swift
 struct ContentView: View {
