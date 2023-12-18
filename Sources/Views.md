@@ -240,7 +240,7 @@ struct ContentView: View {
 }
 ```
 
-## Gesture Recognizer
+## GestureRecognizer
 The base class for concrete gesture recognizers.
 
 ```swift
