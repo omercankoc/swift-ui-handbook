@@ -24,20 +24,22 @@ One of the most important features of SwiftUI is the ability to provide a real-t
 - [AsyncImage](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#asyncimage)
 - [Menu](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#menu)
 
-### Desing
-- [HStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#hstack)
-- [VStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#vstack)
-- [ZStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#zstack)
-- [Grid](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#grid)
-- [Spacer](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#spacer)
-- [Padding](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#padding)
-- [Frame](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#frame)
-- [GeometryReader](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#geometryreader)
-- [ScrollView](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#scrollview)
-- [LazyHStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#lazyhstack)
-- [LazyVStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#lazyvstack)
-- [LazyHGrid](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#lazyhgrid)
-- [LazyVGrid](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#lazyvgrid)
+### Layouts
+- [HStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Layouts.md#hstack)
+- [VStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Layouts.md#vstack)
+- [ZStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Layouts.md#zstack)
+- [Grid](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Layouts.md#grid)
+- [Spacer](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Layouts.md#spacer)
+- [Padding](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Layouts.md#padding)
+- [Frame](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Layouts.md#frame)
+- [GeometryReader](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Layouts.md#geometryreader)
+- [ScrollView](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Layouts.md#scrollview)
+- [LazyHStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Layouts.md#lazyhstack)
+- [LazyVStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Layouts.md#lazyvstack)
+- [LazyHGrid](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Layouts.md#lazyhgrid)
+- [LazyVGrid](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Layouts.md#lazyvgrid)
+- [List](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Layouts.md#list)
+- [Section](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Layouts.md#section)
 
 ### Navigation
 - [Sheet](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Navigation.md#sheet)
@@ -46,10 +48,6 @@ One of the most important features of SwiftUI is the ability to provide a real-t
 - [Navigation Stack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Navigation.md#navigation-stack)
 - [Toolbar](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Navigation.md#toolbar)
 - [Tab View](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Navigation.md#tab-view)
-
-### Listing
-- [List](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/List.md#list)
-- [Section](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/List.md#section)
 
 ### Data Sharing
 - [Observer Object and Binding](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataSharing.md#observer-object-and-binding)
