@@ -8,7 +8,7 @@ UIKit (Imperative) requires defining each user interface mandatorily. SwiftUI (D
 
 One of the most important features of SwiftUI is the ability to provide a real-time preview of the UI while coding. Developers can see the changes they make in the code reflected in the preview, facilitating rapid prototyping and iterative design. SwiftUI also includes a powerful data binding mechanism, enabling automatic synchronization between the UI and the underlying data models. When the data changes, the UI updates automatically, reducing the need for manual updating and synchronization.
 
-### Widgets
+### Views
 - [Text](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#text)
 - [Label](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#label)
 - [TextField](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#textfield)
@@ -49,9 +49,9 @@ One of the most important features of SwiftUI is the ability to provide a real-t
 - [Toolbar](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Navigation.md#toolbar)
 - [Tab View](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Navigation.md#tab-view)
 
-### Data Sharing
-- [Observer Object and Binding](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataSharing.md#observer-object-and-binding)
-- [State Object and Environment Object](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataSharing.md#state-object-and-environment-object)
+### Data and Storage
+- [Observer Object and Binding](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataAndStorage.md#observer-object-and-binding)
+- [State Object and Environment Object](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataAndStorage.md#state-object-and-environment-object)
 
 ### References
 - https://developer.apple.com/tutorials/swiftui
