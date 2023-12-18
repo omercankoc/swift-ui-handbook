@@ -25,19 +25,19 @@ One of the most important features of SwiftUI is the ability to provide a real-t
 - [Menu](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Views.md#menu)
 
 ### Desing
-- [HStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#hstack)
-- [VStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#vstack)
-- [ZStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#zstack)
+- [Horizontal Stack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#hstack)
+- [Vertical Stack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#vstack)
+- [Z Stack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#zstack)
 - [Grid](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#grid)
 - [Spacer](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#spacer)
 - [Padding](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#padding)
 - [Frame](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#frame)
 - [Geometry Reader](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#geometryreader)
 - [Scroll View](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#scrollview)
-- [LazyHStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#lazyhstack)
-- [LazyVStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#lazyvstack)
-- [LazyHGrid](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#lazyhgrid)
-- [LazyVGrid](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#lazyvgrid)
+- [Lazy Horizontal Stack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#lazyhstack)
+- [Lazy Vertical Stack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#lazyvstack)
+- [Lazy Horizontal Grid](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#lazyhgrid)
+- [Lazy Vertical Grid](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#lazyvgrid)
 
 ### Routing
 - [Sheet](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Routing.md#sheet)
