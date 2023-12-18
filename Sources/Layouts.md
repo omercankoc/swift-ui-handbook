@@ -326,23 +326,21 @@ struct ContentView: View {
 ```
 
 ## List
+A container that presents rows of data arranged in a single column, optionally providing the ability to select one or more members.
 
 ```swift
 struct ContentView: View {
-    
-    @State private var languages_ : [String] = []
-    @State private var language : [String] = []
-    @State private var searchable : String = ""
+    @State private var languages: [String] = []
+    @State private var searchable: String = ""
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(languages_, id: \.self){ language in
+                ForEach(self.languages, id: \.self){ language in
                     NavigationLink(value: language){
                         RowView(language: language)
                     }
                 }
-                .onDelete(perform: deleteItem)
             }
             .listStyle(.inset)
             .navigationTitle("Languages")
@@ -353,55 +351,65 @@ struct ContentView: View {
         }
         .searchable(text: $searchable)
         .onAppear {
-            self.language = ["C","C++","Objective-C","Java","C#","Swift","Kotlin","Rust","Go","Python","Ruby","Perl","PHP","JavaScript","Scala","Basic","Assembly","Fortran","Dart"]
-            self.languages_ = self.language
+            self.languages = self.fetch()
         }
-        .onChange(of: searchable) { search in
-            self.languages_ = searchItem(search)
+        .onChange(of: searchable) { oldValue, newValue in
+            self.languages = search(newValue)
         }
-    }
-    
-    func deleteItem(at offsets : IndexSet){
-        self.languages_.remove(atOffsets: offsets)
     }
         
-    func searchItem(_ searchable : String) -> [String] {
+    func search(_ searchable : String) -> [String] {
         if searchable == "" {
-            return self.language
+            return self.fetch()
         } else {
-            return self.languages_.filter(
+            return self.fetch().filter(
                 {
                     $0.lowercased().hasPrefix(searchable.lowercased())
                 }
             )
         }
     }
+    
+    func fetch() -> [String]{
+        return ["C","C++","Objective-C","Java","C#","Swift","Kotlin","Rust","Go","Python","Ruby","Perl","PHP","JavaScript","Scala","Basic","Assembly","Fortran","Dart"]
+    }
+}
+
+struct RowView : View {
+    var language : String?
+    
+    var body: some View {
+        Text(language ?? "Not Found")
+    }
 }
 
 struct DetailView : View {
-    var language : String
+    var language : String?
     
     var body: some View {
         HStack {
-            Text(language)
+            Text(language ?? "Not Found")
         }
-    }
-}
-    
-struct RowView : View {
-    var language : String = ""
-    
-    var body: some View {
-        Text("\(language)")
     }
 }
 ```
 
 ## Section
+A container view that you can use to add hierarchy within certain views.
 
 ```swift
+struct Procedure : Identifiable, Hashable {
+    var id = UUID()
+    var procedure : String
+    var languages : [Language]
+}
+
+struct Language : Identifiable, Hashable {
+    var id = UUID()
+    var language : String
+}
+
 struct ContentView: View {
-    
     @State var sections : [Procedure] = []
     
     var body: some View {
@@ -423,11 +431,11 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            self.sections = get()
+            self.sections = fetch()
         }
     }
     
-    private func get() -> [Procedure] {
+    private func fetch() -> [Procedure] {
         let c = Language(language: "C")
         let cplusplus = Language(language: "C++")
         let java = Language(language: "Java")
@@ -450,7 +458,6 @@ struct ContentView: View {
 }
 
 struct DetailsView: View {
-    
     var language : Language
     
     var body: some View {
@@ -460,17 +467,6 @@ struct DetailsView: View {
                 .foregroundColor(Color.black)
         }
     }
-}
-
-struct Procedure : Identifiable, Hashable {
-    var id = UUID()
-    var procedure : String
-    var languages : [Language]
-}
-
-struct Language : Identifiable, Hashable {
-    var id = UUID()
-    var language : String
 }
 ```
 
