@@ -1,4 +1,4 @@
-## HStack
+## Horizontal Stack
 A view that arranges its subviews in a horizontal line.
 ```swift
 struct ContentView: View {
@@ -13,7 +13,7 @@ struct ContentView: View {
 }
 ```
 
-## VStack
+## Vertical Stack
 A view that arranges its subviews in a vertical line.
 ```swift
 struct ContentView: View {
@@ -28,7 +28,7 @@ struct ContentView: View {
 }
 ```
 
-### HStack and VStack in Alignment and Spacing
+### Horizontal Stack and Vertical Stack in Alignment and Spacing
 Modify the alignment and spacing between elements.
 ```swift
 struct ContentView: View {
@@ -53,7 +53,7 @@ struct ContentView: View {
 }
 ```
 
-## ZStack
+## Z Stack
 A view that overlays its subviews, aligning them in both axes.
 ```swift
 struct ContentView: View {
@@ -153,7 +153,7 @@ struct ContentView: View {
 }
 ```
 
-## GeometryReader 
+## Geometry Reader 
 A container view that defines its content as a function of its own size and coordinate space.
 ```swift
 struct ContentView: View {
@@ -171,7 +171,7 @@ struct ContentView: View {
 }
 ```
 
-## ScrollView
+## Scroll View
 A scrollable view.
 ```swift
 struct ContentView: View {
@@ -190,7 +190,7 @@ struct ContentView: View {
 }
 ```
 
-### ScrollViewReader
+### Scroll View Reader
 A view that provides programmatic scrolling, by working with a proxy to scroll to known child views.
 ```swift
 struct ContentView: View {
@@ -231,7 +231,7 @@ struct ContentView: View {
 }
 ```
 
-## LazyHStack
+## Lazy Horizontal Stack
 A view that arranges its children in a line that grows horizontally, creating items only as needed.
 ```swift
 struct ContentView: View {
@@ -253,7 +253,7 @@ struct ContentView: View {
 }
 ```
 
-## LazyVStack
+## Lazy Vertical Stack
 A view that arranges its children in a line that grows vertically, creating items only as needed.
 ```swift
 struct ContentView: View {
@@ -275,7 +275,7 @@ struct ContentView: View {
 }
 ```
 
-## LazyHGrid
+## Lazy Horizontal Grid
 A container view that arranges its child views in a grid that grows horizontally, creating items only as needed.
 ```swift
 struct ContentView: View {
@@ -300,7 +300,7 @@ struct ContentView: View {
 }
 ```
 
-## LazyVGrid
+## Lazy Vertical Grid
 A container view that arranges its child views in a grid that grows vertically, creating items only as needed.
 ```swift
 struct ContentView: View {
