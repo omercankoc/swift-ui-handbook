@@ -1,7 +1,8 @@
 # Sheet
+Presents a sheet when a binding to a Boolean value that you provide is true.
+
 ```swift
 struct ContentView: View {
-    
     @State private var sheet : Bool = false
     @State var message : String = ""
         
@@ -11,7 +12,10 @@ struct ContentView: View {
             TextField("Enter Message",text: $message)
                 .padding(.leading,10)
                 .frame(width: 300, height: 40, alignment: .center)
-                .background { RoundedRectangle(cornerRadius: 10).stroke(.black) }
+                .background {
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(.black)
+                }
             
             Button {
                 self.sheet.toggle()
@@ -25,17 +29,15 @@ struct ContentView: View {
 }
 
 struct DetailView : View {
-    
-    @Environment(\.presentationMode) var toContentView
-    
-    var message : String?
-    
+    var message : String?   
+    @Environment(\.presentationMode) var detailView
+ 
     var body: some View {
         VStack{
             Text("\(message!)")
             
             Button {
-                self.toContentView.wrappedValue.dismiss()
+                self.detailView.wrappedValue.dismiss()
             } label: {
                 Text("Wrapped Value Dismiss")
             }
@@ -45,9 +47,10 @@ struct DetailView : View {
 ```
 
 # Full Screen Cover
+Presents a modal view that covers as much of the screen as possible when binding to a Boolean value you provide is true.
+
 ```swift
 struct ContentView: View {
-    
     @State private var cover : Bool = false
     @State private var message : String = ""
         
@@ -71,17 +74,15 @@ struct ContentView: View {
 }
 
 struct DetailView : View {
-    
-    @Environment(\.presentationMode) var toContentView
-    
     var message : String?
+    @Environment(\.presentationMode) var detailView
     
     var body: some View {
         VStack{
             Text("\(message!)")
             
             Button {
-                self.toContentView.wrappedValue.dismiss()
+                self.detailView.wrappedValue.dismiss()
             } label: {
                 Text("Wrapped Value Dismiss")
             }
@@ -91,9 +92,10 @@ struct DetailView : View {
 ```
 
 # Popover
+Presents a popover when a given condition is true.
+
 ```swift
 struct ContentView: View {
-    
     @State private var popover : Bool = false
     @State var message : String = ""
         
@@ -117,17 +119,15 @@ struct ContentView: View {
 }
 
 struct DetailView : View {
-    
-    @Environment(\.presentationMode) var toContentView
-    
     var message : String?
-    
+    @Environment(\.presentationMode) var detailView
+   
     var body: some View {
         VStack{
             Text("\(message!)")
             
             Button {
-                self.toContentView.wrappedValue.dismiss()
+                self.detailView.wrappedValue.dismiss()
             } label: {
                 Text("Wrapped Value Dismiss")
             }
@@ -137,21 +137,24 @@ struct DetailView : View {
 ```
 
 # Navigation Stack
+A view that displays a root view and enables you to present additional views over the root view.
+
 ```swift
 struct Person : Hashable {
-    var name : String?
-    var surname : String?
+    var name: String?
+    var surname: String?
+    var email: String?
+    var phone: String?
 }
 
 struct ContentView: View {
-    
-    @State var person : Person = Person(name: "Chris", surname: "Lattner")
+    @State var person : Person = Person()
     
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack(spacing: 10) {
                 NavigationLink(value: person) {
-                    Text("Show Navigation")
+                    Text("Show Detail to \(person.name ?? "Guest")")
                 }
             }
             .navigationTitle("Content View")
@@ -159,17 +162,23 @@ struct ContentView: View {
             .navigationDestination(for: Person.self) { person in
                 DetailView(person: person)
             }
+            .task {
+                person = Person(name: "Chris", 
+                                surname: "Lattner",
+                                email: "chrislattner@mail.com",
+                                phone: "+1234567890")
+            }
         }
     }
 }
 
 struct DetailView : View {
-        
     var person = Person()
     
     var body: some View {
         VStack{
             Text("Hello \(person.name ?? "") \(person.surname ?? "")! ")
+            Text("To Contact Me \(person.email ?? "") or \(person.phone ?? "")")
         }
         .navigationTitle("Detail")
         .navigationBarTitleDisplayMode(.inline)
@@ -178,10 +187,12 @@ struct DetailView : View {
 ```
 
 # Toolbar
+Populates the toolbar or navigation bar with the specified items.
+
 ```swift
 struct ContentView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Text("Content View")
             }
@@ -214,13 +225,16 @@ struct ContentView: View {
 ```
 
 # Tab View
+A view that switches between multiple child views using interactive user interface elements.
+
 ```swift
 struct ContentView: View {
     var body: some View {
         NavigationStack {
             TabView {
                 VStack {
-                    Text("First Screen").font(.largeTitle)
+                    Text("First Screen")
+                        .font(.largeTitle)
                 }
                 .tabItem {
                     Image(systemName: "1.circle")
@@ -229,7 +243,8 @@ struct ContentView: View {
                 .tag(0)
                 
                 VStack {
-                    Text("Second Screen").font(.largeTitle)
+                    Text("Second Screen")
+                        .font(.largeTitle)
                 }
                 .tabItem {
                     Image(systemName: "2.circle")
