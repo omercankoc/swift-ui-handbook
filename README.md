@@ -29,7 +29,6 @@ One of the most important features of SwiftUI is the ability to provide a real-t
 - [VStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#vstack)
 - [ZStack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#zstack)
 - [Grid](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#grid)
-- [Alignment and Spacing](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#alignmentandspacing)
 - [Spacer](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#spacer)
 - [Padding](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#padding)
 - [Frame](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#frame)
