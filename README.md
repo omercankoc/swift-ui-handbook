@@ -39,13 +39,13 @@ One of the most important features of SwiftUI is the ability to provide a real-t
 - [LazyHGrid](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#lazyhgrid)
 - [LazyVGrid](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Design.md#lazyvgrid)
 
-### Routing
-- [Sheet](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Routing.md#sheet)
-- [Full Screen Cover](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Routing.md#full-screen-cover)
-- [Popover](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Routing.md#popover)
-- [Navigation Stack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Routing.md#navigation-stack)
-- [Toolbar](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Routing.md#toolbar)
-- [Tab View](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Routing.md#tab-view)
+### Navigation
+- [Sheet](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Navigation.md#sheet)
+- [Full Screen Cover](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Navigation.md#full-screen-cover)
+- [Popover](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Navigation.md#popover)
+- [Navigation Stack](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Navigation.md#navigation-stack)
+- [Toolbar](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Navigation.md#toolbar)
+- [Tab View](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Navigation.md#tab-view)
 
 ### Listing
 - [List](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/List.md#list)
