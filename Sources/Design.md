@@ -190,7 +190,7 @@ struct ContentView: View {
 }
 ```
 
-## ScrollViewReader
+### ScrollViewReader
 A view that provides programmatic scrolling, by working with a proxy to scroll to known child views.
 ```swift
 struct ContentView: View {
