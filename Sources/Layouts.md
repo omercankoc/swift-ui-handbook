@@ -325,7 +325,7 @@ struct ContentView: View {
 }
 ```
 
-# List
+## List
 
 ```swift
 struct ContentView: View {
@@ -397,7 +397,7 @@ struct RowView : View {
 }
 ```
 
-# Section
+## Section
 
 ```swift
 struct ContentView: View {
