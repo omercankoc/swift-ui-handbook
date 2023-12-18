@@ -28,6 +28,31 @@ struct ContentView: View {
 }
 ```
 
+### HStack and VStack in Alignment and Spacing
+Modify the alignment and spacing between elements.
+```swift
+struct ContentView: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10){
+            Text("First")
+            Text("Second")
+            Text("Third")
+        }
+    }
+}
+```
+```swift
+struct ContentView: View {
+    var body: some View {
+        HStack(alignment: .top, spacing: 10){
+            Text("First")
+            Text("Second")
+            Text("Third")
+        }
+    }
+}
+```
+
 ## ZStack
 A view that overlays its subviews, aligning them in both axes.
 ```swift
@@ -63,31 +88,6 @@ struct ContentView: View {
             }
         }
         .frame(width: 300, height: 300, alignment: .center)
-    }
-}
-```
-
-## Alignment and Spacing
-Modify the alignment and spacing between elements.
-```swift
-struct ContentView: View {
-    var body: some View {
-        VStack(alignment: .leading, spacing: 10){
-            Text("First")
-            Text("Second")
-            Text("Third")
-        }
-    }
-}
-```
-```swift
-struct ContentView: View {
-    var body: some View {
-        HStack(alignment: .top, spacing: 10){
-            Text("First")
-            Text("Second")
-            Text("Third")
-        }
     }
 }
 ```
