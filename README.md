@@ -17,9 +17,9 @@ One of the most important features of SwiftUI is the ability to provide a real-t
 - [Tab View](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/Navigation.md#tab-view)
 
 ### Data and Storage
-- [@State](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataAndStorage.md#observer-object-and-binding)
-- [@Binding](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataAndStorage.md#observer-object-and-binding)
-- [@ObservableObject](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataAndStorage.md#observer-object-and-binding)
+- [@State](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataAndStorage.md#@state)
+- [@Binding](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataAndStorage.md#@binding)
+- [@ObservableObject](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataAndStorage.md#@observableobject)
 - [@Published](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataAndStorage.md#observer-object-and-binding)
 - [@ObserverObject](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataAndStorage.md#observer-object-and-binding)
 - [@StateObject](https://github.com/omercankoc/swift-ui-handbook/blob/main/Sources/DataAndStorage.md#observer-object-and-binding)
