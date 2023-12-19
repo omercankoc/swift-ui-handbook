@@ -178,7 +178,8 @@ struct ContentView: View {
             }
             .navigationTitle("Content View")
             .navigationBarTitleDisplayMode(.inline)
-        }.environmentObject(counter)
+        }
+        .environmentObject(counter)
     }
 }
 
