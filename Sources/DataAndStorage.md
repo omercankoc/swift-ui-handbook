@@ -1,5 +1,5 @@
 
-## State
+## @State
 A property wrapper type that can read and write a value managed by SwiftUI.
 
 In UI operations, it serves to automatically update the UI object connected via Main Thread by understanding that the @State property wrapper variable changes automatically when we change its value.
@@ -23,7 +23,7 @@ struct ContentView: View {
 }
 ```
 
-## Binding
+## @Binding
 A property wrapper type that can read and write a value owned by a source of truth.
 - Binding Recap($): It is used to define the feature that has a read-write connection between two views.
 
